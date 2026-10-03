@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #2d2d44);
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+    }
+
+    header {
+      width: 100%;
+      background: rgba(42, 42, 58, 0.85);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 600;
+      color: #ffffffcc;
+    }
+
+    .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #f1f1f1;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background: #444;
+    }
+
+    .glass-card {
+      background: rgba(42, 42, 58, 0.85);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      width: 400px;
+      text-align: center;
+      margin-top: 120px;
+    }
+
+    .glass-card h1 {
+      font-size: 28px;
+      margin-bottom: 25px;
+      color: #f1f1f1;
+    }
+
+    .container {
+      background: #2a2a3a;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 22px;
+      color: #f8f8f8;
+    }
+
+    .input-group {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .input-group label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+      color: #ccc;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      background: #3a3a4a;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      transition: background 0.3s;
+    }
+
+    .input-group input:focus {
+      background: #4c4c5a;
+    }
+
+    .btn-submit {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      background: #ff6b6b;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: #ff4f4f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EditPro – Text Editing Simplified</div>
+    <div class="nav-links">
+      <a href="Admin.jsp">👑 Admin Panel</a>
+      <a href="Editor.jsp">✍️ Text Editor</a>
+      <a href="Register.jsp">🆕 New User</a>
+    </div>
+  </header>
+
+  <div class="glass-card">
+    <h1>Welcome Back</h1>
+    <div class="container">
+      <h2>Login to Your Account</h2>
+      <form id="loginForm" action="LoginServlet" method="post">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <button class="btn-submit" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
